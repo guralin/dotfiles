@@ -1,4 +1,8 @@
 "setting
+"シンタックスハイライトを有効にする
+syntax on
+"colorschemeをmolokaiにする
+colorscheme molokai
 "文字コードをUFT-8に設定
 set fenc=utf-8
 " バックアップファイルを作らない
