@@ -1,8 +1,8 @@
 "setting
 "シンタックスハイライトを有効にする
 syntax on
-"colorscheme: molokai , green
-colorscheme molokai
+"colorscheme: molokai , green, tokyo-metoro
+colorscheme tokyo-metoro
 "文字コードをUFT-8に設定
 set fenc=utf-8
 " バックアップファイルを作らない
