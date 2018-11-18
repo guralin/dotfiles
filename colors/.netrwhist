@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/guralin/virtual_mother/templates'
+let g:netrw_dirhist_2='/home/guralin/virtual_mother'
+let g:netrw_dirhist_3='/home/guralin/Dropbox/TwitterCertificateByPython'
+let g:netrw_dirhist_4='/home/guralin/Dropbox/TwitterCertificateByPython/templates'
+let g:netrw_dirhist_5='/home/guralin/Dropbox/TwitterCertificateByPython'
+let g:netrw_dirhist_6='/home/guralin/virtual_mother'
