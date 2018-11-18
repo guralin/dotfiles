@@ -169,3 +169,5 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 
 """NERDTreeの設定"""
 autocmd VimEnter * execute 'NERDTree'
+
+"""""""""""""""""""
