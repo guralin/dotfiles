@@ -168,6 +168,6 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 
 
 """NERDTreeの設定"""
-autocmd VimEnter * execute 'NERDTree'
-
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 """""""""""""""""""
