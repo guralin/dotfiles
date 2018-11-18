@@ -96,6 +96,12 @@ if dein#load_state('/home/guralin/.cache/dein')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('scrooloose/nerdtree')
+  call dein#add('Shougo/unite.vim')
+  
+  call dein#add('thinca/vim-quickrun')
+  " git
+  call dein#add('tpope/vim-fugitive')
+
 
   " Required:
   call dein#end()
@@ -127,7 +133,6 @@ call dein#add('Shougo/vimproc.vim', {'build': 'make'})
 call dein#add('Shougo/unite.vim')
 " Unite.vimで最近使ったファイルを表示できるようにする
 call dein#add('Shougo/neomru.vim')
-" ...省略
 
 call dein#end()
 
@@ -168,6 +173,8 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 
 
 """NERDTreeの設定"""
+" vimとだけ打つと最初からツリーが出てくる
+" ファイル名をセットで打つとツリーは出てこない
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 """""""""""""""""""
