@@ -80,7 +80,7 @@ highlight Folded ctermbg=none
 highlight EndOfBuffer ctermbg=none 
 
 " templateを読み込む
-source ~/.vim/templates/html.vim
+source ~/.vim/templates/make_template.vim
 
 
 "dein Scripts-----------------------------

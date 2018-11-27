@@ -1,5 +1,6 @@
 function! Make_Template(prog_lang)
-    let inputfile ="/home/guralin/dotfiles/templates/" . a:prog_lang
+    let inputfile = $HOME . "/dotfiles/templates/" . a:prog_lang
+    echo inputfile
     normal ggO
     for line in readfile(inputfile)
         execute ":normal i" . line
