@@ -68,12 +68,19 @@ set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 set clipboard=unnamed,autoselect
+
+" Pythonの設定
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+
+
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 highlight LineNr ctermbg=none
 highlight Folded ctermbg=none
 highlight EndOfBuffer ctermbg=none 
+
+" templateを読み込む
+source ~/.vim/templates/html.vim
 
 
 "dein Scripts-----------------------------
