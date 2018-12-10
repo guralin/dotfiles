@@ -1,8 +1,8 @@
 "setting
 "シンタックスハイライトを有効にする
 syntax on
-"colorscheme: molokai , green, tokyo-metro, iceberg
-colorscheme tokyo-metro
+"colorscheme: molokai , green, tokyo-metro, iceberg,yozakura,tone,night-owl
+colorscheme night-owl
 "文字コードをUFT-8に設定
 set fenc=utf-8
 set encoding=utf-8
