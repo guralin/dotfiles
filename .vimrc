@@ -108,6 +108,7 @@ if dein#load_state('/home/guralin/.cache/dein')
   call dein#add('thinca/vim-quickrun')
   " git
   call dein#add('tpope/vim-fugitive')
+  call dein#add('othree/yajs.vim')
 
 
   " Required:
