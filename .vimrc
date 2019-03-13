@@ -83,6 +83,7 @@ highlight EndOfBuffer ctermbg=none
 source ~/.vim/templates/make_template.vim
 
 
+<<<<<<< HEAD
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
@@ -186,3 +187,6 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 """""""""""""""""""
+=======
+
+>>>>>>> 2b5d2b5... add C syntax highlight

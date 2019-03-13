@@ -1,1 +1,12 @@
 let g:netrw_dirhistmax  =10
+<<<<<<< HEAD
+=======
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/guralin/virtual_mother/rewriteConfigVar'
+let g:netrw_dirhist_2='/home/guralin/Dropbox/Project/send_temprature'
+let g:netrw_dirhist_3='/home/guralin/virtual_mother/virtualmother_app'
+let g:netrw_dirhist_4='/home/guralin/virtual_mother/virtualmother_app/static'
+let g:netrw_dirhist_5='/home/guralin/virtual_mother/virtualmother_app'
+let g:netrw_dirhist_6='/home/guralin/virtual_mother/virtualmother_app/templates'
+let g:netrw_dirhist_7='/home/guralin/201903A/blog-html'
+>>>>>>> 2b5d2b5... add C syntax highlight
