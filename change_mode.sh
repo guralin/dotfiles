@@ -12,3 +12,5 @@ if [ -e /home/guralin/.cache/dein ]; then
 else
     echo "あんまりすごくないね"
 fi
+
+echo $HOME

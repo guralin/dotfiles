@@ -16,7 +16,8 @@ cat << EOS
 のシンボリックリンクを~/.vimに配置
 EOS
 
-if [ -e /home/guralin/.cache/dein ]; then
+# deinが存在するか
+if [ -e $HOME/.cache/dein ]; then
     echo "deinはインストール済み"
 else
     sh bash/installer.sh ~/.cache/dein
