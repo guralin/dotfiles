@@ -3,13 +3,18 @@
 #シンボリックリンクを作る
 
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
+echo "~/dotfiles/.vimrc のシンボリックリンクを~/.vimrcに置き換え"
+
+if [ ! -e ~/.vim ]; then
+    mkdir ~/.vim
+    echo ".vimを作成"
+fi
+
 ln -sf ~/dotfiles/colors ~/.vim
 ln -sf ~/dotfiles/templates ~/.vim
 ln -sf ~/dotfiles/after ~/.vim
 
 cat << EOS
-~/dotfiles/.vimrc 
-のシンボリックリンクを~/.vimrcに置き換え
 ~/dotfiles/colors
 ~/dotfiles/templates
 ~/dotfiles/after 

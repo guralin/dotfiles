@@ -50,7 +50,7 @@ nnoremap k gk
 
 " Tab系
 " 不可視文字を可視化(タブが「▸-」と表示される)
-set list listchars=tab:\▸\-
+set listchars=tab:\▸\-
 " Tab文字を半角スペースにする
 set expandtab
 " 行頭以外のTab文字の表示幅（スペースいくつ分）
@@ -115,6 +115,7 @@ if mode == 'dein.vim'
       " git
       call dein#add('tpope/vim-fugitive')
       call dein#add('othree/yajs.vim')
+      call dein#add('mattn/emmet-vim')
 
 
       " Required:
@@ -193,3 +194,14 @@ if mode == 'dein.vim'
     autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
     """""""""""""""""""
 endif
+
+"------------------------------------
+" emmet-vim
+"------------------------------------
+let g:user_emmet_leader_key='<c-e>'
+let g:user_emmet_settings = {
+    \    'variables': {
+    \      'lang': "ja"
+    \    },
+    \   'indentation': '  '
+    \ }
