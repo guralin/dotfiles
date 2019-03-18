@@ -21,7 +21,7 @@ set showcmd
 source ~/.vim/templates/make_template.vim
 
 
-"source ~/dotfiles/setting.vim
+source ~/dotfiles/setting.vim
 
 
 " 見た目系
