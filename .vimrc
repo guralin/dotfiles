@@ -17,6 +17,12 @@ set hidden
 " 入力中のコマンドをステータスに表示する
 set showcmd
 
+" templateを読み込む
+source ~/.vim/templates/make_template.vim
+
+
+source ~/dotfiles/setting.vim
+
 
 " 見た目系
 " 行番号を表示
@@ -44,7 +50,7 @@ nnoremap k gk
 
 " Tab系
 " 不可視文字を可視化(タブが「▸-」と表示される)
-set list listchars=tab:\▸\-
+set listchars=tab:\▸\-
 " Tab文字を半角スペースにする
 set expandtab
 " 行頭以外のTab文字の表示幅（スペースいくつ分）
@@ -79,8 +85,123 @@ highlight LineNr ctermbg=none
 highlight Folded ctermbg=none
 highlight EndOfBuffer ctermbg=none 
 
-" templateを読み込む
-source ~/.vim/templates/make_template.vim
 
 
+"dein Scripts-----------------------------
 
+if mode == 'dein.vim'
+    if &compatible
+      set nocompatible               " Be iMproved
+    endif
+
+    " Required:
+    set runtimepath+=/home/guralin/.cache/dein/repos/github.com/Shougo/dein.vim
+
+    " Required:
+    if dein#load_state('/home/guralin/.cache/dein')
+      call dein#begin('/home/guralin/.cache/dein')
+
+      " Let dein manage dein
+      " Required:
+      call dein#add('/home/guralin/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+      " Add or remove your plugins here like this:
+      call dein#add('Shougo/neosnippet.vim')
+      call dein#add('Shougo/neosnippet-snippets')
+      call dein#add('scrooloose/nerdtree')
+      call dein#add('Shougo/unite.vim')
+      
+      call dein#add('thinca/vim-quickrun')
+      " git
+      call dein#add('tpope/vim-fugitive')
+      call dein#add('othree/yajs.vim')
+      call dein#add('mattn/emmet-vim')
+
+
+      " Required:
+      call dein#end()
+      call dein#save_state()
+    endif
+
+    " Required:
+    filetype plugin indent on
+    syntax enable
+
+    " If you want to install not installed plugins on startup.
+    if dein#check_install()
+      call dein#install()
+    endif
+
+    "End dein Scripts-------------------------
+
+    """"""""""""""""""""""""""""""
+    " プラグインのセットアップ
+    """"""""""""""""""""""""""""""
+    set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
+
+    call dein#begin(expand('~/.vim/dein'))
+
+    call dein#add('Shougo/dein.vim')
+    call dein#add('Shougo/vimproc.vim', {'build': 'make'})
+
+    " ファイルオープンを便利に
+    call dein#add('Shougo/unite.vim')
+    " Unite.vimで最近使ったファイルを表示できるようにする
+    call dein#add('Shougo/neomru.vim')
+
+    call dein#end()
+
+    " Required:
+    filetype plugin indent on
+    """"""""""""""""""""""""""""""
+
+
+    " ファイルオープンを便利に
+    "Plug 'Shougo/unite.vim'
+    " Unite.vimで最近使ったファイルを表示できるようにする
+    "Plug 'Shougo/neomru.vim'
+
+    " http://blog.remora.cx/2010/12/vim-ref-with-unite.html
+    """"""""""""""""""""""""""""""
+    " Unit.vimの設定
+    """"""""""""""""""""""""""""""
+    " 入力モードで開始する
+    let g:unite_enable_start_insert=1
+    " バッファ一覧
+    noremap <C-P> :Unite buffer<CR>
+    " ファイル一覧
+    noremap <C-N> :Unite -buffer-name=file file<CR>
+    " 最近使ったファイルの一覧
+    noremap <C-Z> :Unite file_mru<CR>
+    " sourcesを「今開いているファイルのディレクトリ」とする
+    noremap :uff :<C-u>UniteWithBufferDir file -buffer-name=file<CR>
+    " ウィンドウを分割して開く
+    au FileType unite nnoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
+    au FileType unite inoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
+    " ウィンドウを縦に分割して開く
+    au FileType unite nnoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
+    au FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
+    " ESCキーを2回押すと終了する
+    au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
+    au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
+    """"""""""""""""""""""""""""""
+
+
+    """NERDTreeの設定"""
+    " vimとだけ打つと最初からツリーが出てくる
+    " ファイル名をセットで打つとツリーは出てこない
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+    """""""""""""""""""
+endif
+
+"------------------------------------
+" emmet-vim
+"------------------------------------
+let g:user_emmet_leader_key='<c-e>'
+let g:user_emmet_settings = {
+    \    'variables': {
+    \      'lang': "ja"
+    \    },
+    \   'indentation': '  '
+    \ }
