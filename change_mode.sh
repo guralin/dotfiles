@@ -1,9 +1,7 @@
 #!/bin/bash
 echo "プラグインの有無を上書きします"
-echo "dein.vimにしたい方は'd'を入力"
-echo "プラグインなしにしたい方は'n'を入力"
-echo "特に指定がない場合は'r'を入力して"
-echo "<Enter>キーを押してください"
+echo "dein.vim:'d' プラグインなし:'n' 特に指定がない場合:'r'"
+echo "入力して<Enter>キーを押してください"
 
 read mode
 if [ $mode == 'd' ]; then

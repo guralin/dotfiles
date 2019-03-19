@@ -14,6 +14,10 @@ ln -sf ~/dotfiles/colors ~/.vim
 ln -sf ~/dotfiles/templates ~/.vim
 ln -sf ~/dotfiles/after ~/.vim
 
+echo "alias change_vim='. ~/dotfiles/change_mode.sh'" >> ~/.bashrc
+
+source ~/.bashrc
+
 cat << EOS
 ~/dotfiles/colors
 ~/dotfiles/templates

@@ -87,10 +87,10 @@ highlight EndOfBuffer ctermbg=none
 
 
 
+" 変数modeを取得
 source ~/dotfiles/setting.vim
 
 "setting.vimを読み込み、設定がしてあればそちらを優先する
-
 if mode != 'dein.vim' &&  mode != 'normal.vim'
     if  v:version >= 800
         let mode = "dein.vim"
