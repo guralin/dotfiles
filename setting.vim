@@ -1,5 +1,6 @@
-
-let mode = ""
+" 書き換えが行われます
+let mode = "dein.vim"
+" 終了
 
 "let mode = 'dein.vim'
 
