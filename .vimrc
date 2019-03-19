@@ -21,7 +21,6 @@ set showcmd
 source ~/.vim/templates/make_template.vim
 
 
-source ~/dotfiles/setting.vim
 
 
 " 見た目系
@@ -86,6 +85,19 @@ highlight Folded ctermbg=none
 highlight EndOfBuffer ctermbg=none 
 
 
+
+
+source ~/dotfiles/setting.vim
+
+"setting.vimを読み込み、設定がしてあればそちらを優先する
+
+if mode != 'dein.vim' &&  mode != 'normal.vim'
+    if  v:version >= 800
+        let mode = "dein.vim"
+    elseif
+        let mode = "normal.vim"
+    endif
+endif
 
 "dein Scripts-----------------------------
 
