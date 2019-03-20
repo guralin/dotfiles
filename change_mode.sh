@@ -5,14 +5,14 @@ echo "入力して<Enter>キーを押してください"
 
 read mode
 if [ $mode == 'd' ]; then
-    sed  -i -e "2 s/let mode.*$/let mode = \"dein.vim\"/" setting.vim
+    sed  -i -e "2 s/let mode.*$/let mode = \"dein.vim\"/" ~/dotfiles/setting.vim
     echo "dein.vimに変更"
 elif [ $mode == "n" ]; then
-    sed  -i -e "2 s/let mode.*$/let mode = \"normal.vim\"/" setting.vim
+    sed  -i -e "2 s/let mode.*$/let mode = \"normal.vim\"/" ~/dotfiles/setting.vim
     echo "プラグインなしに変更"
 
 elif [ $mode == "r" ]; then
-    sed  -i -e "2 s/let mode.*$/let mode = \"\"/" setting.vim
+    sed  -i -e "2 s/let mode.*$/let mode = \"\"/" ~/dotfiles/setting.vim
     echo "指定なしにしました"
 else
     echo "変更なし"
