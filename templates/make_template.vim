@@ -11,4 +11,4 @@ endfunction
 command! HTML5 call Make_Template("template.html")
 command! Python call Make_Template("template.py")
 command! Bash call Make_Template("template.sh")
-
+command! Cstdio call Make_Template("Cstdio")
