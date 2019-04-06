@@ -6,9 +6,14 @@ function! Make_Template(prog_lang)
         execute ":normal i" . line
         execute ":normal a\r"
     endfor
+    
 endfunction
 
-command! HTML5 call Make_Template("template.html")
-command! Python call Make_Template("template.py")
-command! Bash call Make_Template("template.sh")
-command! Cstdio call Make_Template("Cstdio")
+" ファイルの名前を引数にとる
+function! Create_command_args(ArgLead, CmdLine, CusorPos)
+    let template_list = system('ls ~/dotfiles/templates/')
+    return template_list
+endfunction
+
+" 引数に渡した名前のtemplateファイルを呼び出す
+command! -nargs=1 -complete=custom,Create_command_args Template call Make_Template(<f-args>)
