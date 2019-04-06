@@ -115,16 +115,16 @@ if mode == 'dein.vim'
       call dein#add('/home/guralin/.cache/dein/repos/github.com/Shougo/dein.vim')
 
       " Add or remove your plugins here like this:
-      call dein#add('Shougo/neosnippet.vim')
-      call dein#add('Shougo/neosnippet-snippets')
-      call dein#add('scrooloose/nerdtree')
-      call dein#add('Shougo/unite.vim')
-      
-      call dein#add('thinca/vim-quickrun')
-      " git
-      call dein#add('tpope/vim-fugitive')
-      call dein#add('othree/yajs.vim')
-      call dein#add('mattn/emmet-vim')
+      "call dein#add('Shougo/neosnippet.vim')
+      "call dein#add('Shougo/neosnippet-snippets')
+      "call dein#add('scrooloose/nerdtree')
+      "call dein#add('Shougo/unite.vim')
+      "
+      "call dein#add('thinca/vim-quickrun')
+      "" git
+      "call dein#add('tpope/vim-fugitive')
+      "call dein#add('othree/yajs.vim')
+      "call dein#add('mattn/emmet-vim')
 
 
       " Required:
