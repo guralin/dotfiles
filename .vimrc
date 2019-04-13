@@ -46,6 +46,11 @@ set wildmode=list:longest
 nnoremap j gj
 nnoremap k gk
 
+" 対応する括弧に一瞬カーソルが飛ぶようになる
+set showmatch
+" showmatchのカーソルが飛ぶ時間を　0.1*n秒で設定(デフォルトは0.5秒)
+set matchtime = 2
+
 
 " Tab系
 " 不可視文字を可視化(タブが「▸-」と表示される)
