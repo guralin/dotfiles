@@ -77,7 +77,8 @@ set hlsearch
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
-set clipboard=unnamed,autoselect
+" yankとOSのクリップボードを共有する。linuxではunnamedplusを使用する
+set clipboard=unnamedplus,autoselect
 
 " Pythonの設定
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
