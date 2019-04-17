@@ -6,7 +6,6 @@ function! Make_Template(prog_lang)
         execute ":normal i" . line
         execute ":normal a\r"
     endfor
-    
 endfunction
 
 " ファイルの名前を引数にとる
