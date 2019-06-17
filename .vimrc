@@ -21,8 +21,6 @@ set showcmd
 source ~/.vim/templates/make_template.vim
 
 
-
-
 " 見た目系
 " 行番号を表示
 set number
@@ -99,6 +97,22 @@ if mode != 'dein.vim' &&  mode != 'normal.vim'
         let mode = "dein.vim"
     elseif
         let mode = "normal.vim"
+    endif
+endif
+
+
+" ESCを入力した際に、IMEを無効にするスクリプト
+" fcitx-mozcが入っていることを前提にしているため、入っていない環境では動作しない
+"参考(https://qiita.com/hoshitocat/items/a80d613ef73b7a06ec50)
+
+let is_fcitx_mozc = system('dpkg -l | grep fcitx-mozc | wc -l')
+
+if has('unix')
+    if is_fcitx_mozc  
+        function! ImInActivate()
+            call system('fcitx-remote -c')
+        endfunction
+        inoremap <silent> <C-[> <ESC>:call ImInActivate()<CR>
     endif
 endif
 
@@ -220,13 +234,4 @@ let g:user_emmet_settings = {
     \    },
     \   'indentation': '  '
     \ }
-
-"if has('unix')
-"  inoremap <silent><Esc> <Esc>:silent call system('fcitx-remote -c" > /dev/null 2>&1')<CR>
-"  if has('gui_running') " ターミナルでカーソル・キーで履歴が辿れなくなる--
-"    cnoremap <silent><Esc> <Esc>:silent call system('fcitx-remote -c" > /dev/null 2>&1')<CR>
-"  endif
-"endif
-
-
 
