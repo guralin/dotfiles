@@ -220,3 +220,13 @@ let g:user_emmet_settings = {
     \    },
     \   'indentation': '  '
     \ }
+
+"if has('unix')
+"  inoremap <silent><Esc> <Esc>:silent call system('fcitx-remote -c" > /dev/null 2>&1')<CR>
+"  if has('gui_running') " ターミナルでカーソル・キーで履歴が辿れなくなる--
+"    cnoremap <silent><Esc> <Esc>:silent call system('fcitx-remote -c" > /dev/null 2>&1')<CR>
+"  endif
+"endif
+
+
+
