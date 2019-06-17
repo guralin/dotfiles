@@ -87,7 +87,7 @@ highlight LineNr ctermbg=none
 highlight Folded ctermbg=none
 highlight EndOfBuffer ctermbg=none 
 
-
+" vimのバージョンやsetting.vimを見ながら読み込まれる設定を変えるスクリプト
 " 変数modeを取得
 source ~/dotfiles/setting.vim
 
