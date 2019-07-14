@@ -106,15 +106,15 @@ endif
 "参考(https://qiita.com/hoshitocat/items/a80d613ef73b7a06ec50)
 
 let is_fcitx_mozc = system('dpkg -l | grep fcitx-mozc | wc -l')
-
-if has('unix')
-    if is_fcitx_mozc  
-        function! ImInActivate()
-            call system('fcitx-remote -c')
-        endfunction
-        inoremap <silent> <C-[> <ESC>:call ImInActivate()<CR>
-    endif
-endif
+" 矢印キーが使えなくなる不具合があったためコメントアウト
+" if has('unix')
+"     if is_fcitx_mozc  
+"         function! ImInActivate()
+"             call system('fcitx-remote -c')
+"         endfunction
+"         inoremap <silent> <C-[> <ESC>:call ImInActivate()<CR>
+"     endif
+" endif
 
 "dein Scripts-----------------------------
 
