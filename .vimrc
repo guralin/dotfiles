@@ -9,8 +9,7 @@ set encoding=utf-8
 " バックアップファイルを作らない
 set nobackup
 " スワップファイルを作らない
-set noswapfile
-" 編集中のファイルが変更されたら自動で読み直す
+set noswapfile " 編集中のファイルが変更されたら自動で読み直す
 set autoread
 " バッファが編集中でもその他のファイルを開けるように
 set hidden
@@ -52,14 +51,15 @@ set matchtime=2
 
 " Tab系
 " 不可視文字を可視化(タブが「▸-」と表示される)
-set listchars=tab:\▸\-
+"set listchars=tab:\▸\-
+set list
+set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 " Tab文字を半角スペースにする
 set expandtab
 " 行頭以外のTab文字の表示幅（スペースいくつ分）
 set tabstop=4
 " 行頭でのTab文字の表示幅
 set shiftwidth=4
-
 
 " 検索系
 " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
