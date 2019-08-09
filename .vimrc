@@ -81,11 +81,6 @@ set clipboard=unnamedplus,autoselect
 " Pythonの設定
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none
-highlight LineNr ctermbg=none
-highlight Folded ctermbg=none
-highlight EndOfBuffer ctermbg=none 
 
 " vimのバージョンやsetting.vimを見ながら読み込まれる設定を変えるスクリプト
 " 変数modeを取得
@@ -234,4 +229,10 @@ let g:user_emmet_settings = {
     \    },
     \   'indentation': '  '
     \ }
+" 背景の設定(dein.vimの導入より前の行に設定を行うと上書きされてしまう)
 
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+highlight LineNr ctermbg=none
+highlight Folded ctermbg=none
+highlight EndOfBuffer ctermbg=none 
