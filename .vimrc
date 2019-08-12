@@ -130,6 +130,7 @@ if mode == 'dein.vim'
       call dein#add('/home/guralin/.cache/dein/repos/github.com/Shougo/dein.vim')
 
       " Add or remove your plugins here like this:
+      call dein#add('udalov/kotlin-vim')
       "call dein#add('Shougo/neosnippet.vim')
       "call dein#add('Shougo/neosnippet-snippets')
       "call dein#add('scrooloose/nerdtree')
@@ -214,8 +215,8 @@ if mode == 'dein.vim'
     """NERDTreeの設定"""
     " vimとだけ打つと最初からツリーが出てくる
     " ファイル名をセットで打つとツリーは出てこない
-    autocmd StdinReadPre * let s:std_in=1
-    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+    "autocmd StdinReadPre * let s:std_in=1
+    "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
     """""""""""""""""""
 endif
 
