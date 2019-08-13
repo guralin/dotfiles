@@ -1,6 +1,9 @@
 "setting
 "シンタックスハイライトを有効にする
 syntax on
+" Raspberry Pi でもcolorschemeを適応させる
+" http://blog.ksswre.net/2013/11/vim-colorscheme.html
+set t_Co=256
 "colorscheme: molokai , green, tokyo-metro, iceberg,yozakura,tone,night-owl
 colorscheme tokyo-metro
 "文字コードをUFT-8に設定
