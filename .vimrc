@@ -142,7 +142,7 @@ if mode == 'dein.vim'
       "call dein#add('thinca/vim-quickrun')
       "" git
       "call dein#add('tpope/vim-fugitive')
-      "call dein#add('othree/yajs.vim')
+      call dein#add('othree/yajs.vim')
       "call dein#add('mattn/emmet-vim')
 
 
@@ -200,7 +200,7 @@ if mode == 'dein.vim'
     " ファイル一覧
     noremap <C-N> :Unite -buffer-name=file file<CR>
     " 最近使ったファイルの一覧
-    noremap <C-Z> :Unite file_mru<CR>
+    "noremap <C-Z> :Unite file_mru<CR>
     " sourcesを「今開いているファイルのディレクトリ」とする
     noremap :uff :<C-u>UniteWithBufferDir file -buffer-name=file<CR>
     " ウィンドウを分割して開く
