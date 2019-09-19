@@ -27,7 +27,7 @@ source ~/.vim/templates/make_template.vim
 " 行番号を表示
 set number
 " 現在の行を強調表示
-"set cursorline
+set cursorline
 " 現在の行を強調表示（縦）
 set cursorcolumn
 " 行末の1文字先までカーソルを移動できるように
