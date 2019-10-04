@@ -27,7 +27,7 @@ source ~/.vim/templates/make_template.vim
 " 行番号を表示
 set number
 " 現在の行を強調表示
-"set cursorline
+set cursorline
 " 現在の行を強調表示（縦）
 set cursorcolumn
 " 行末の1文字先までカーソルを移動できるように
@@ -117,6 +117,7 @@ if dein#load_state('/home/guralin/.cache/dein')
   " Add or remove your plugins here like this:
   "call dein#add('Shougo/neosnippet.vim')
   "call dein#add('Shougo/neosnippet-snippets')
+  
 
   " Required:
   call dein#end()
@@ -131,6 +132,13 @@ syntax enable
 "if dein#check_install()
 "  call dein#install()
 "endif
-
+"
 "End dein Scripts-------------------------
 
+" Vimの背景色をなくすための設定
+" (https://sy-base.com/myrobotics/vim/vim-transparent/)
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+highlight LineNr ctermbg=none
+highlight Folded ctermbg=none
+highlight EndOfBuffer ctermbg=none 
