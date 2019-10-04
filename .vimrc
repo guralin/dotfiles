@@ -2,7 +2,7 @@
 "シンタックスハイライトを有効にする
 syntax on
 " Raspberry Pi でもcolorschemeを適応させる
-" http://blog.ksswre.net/2013/11/vim-colorscheme.html
+" (http://blog.ksswre.net/2013/11/vim-colorscheme.html)
 set t_Co=256
 "colorscheme: molokai , green, tokyo-metro, iceberg,yozakura,tone,night-owl
 colorscheme tokyo-metro
@@ -99,42 +99,44 @@ if mode != 'dein.vim' &&  mode != 'normal.vim'
 endif
 
 "dein Scripts-----------------------------
-if &compatible
-  set nocompatible               " Be iMproved
+if mode == 'dein.vim'
+    if &compatible
+      set nocompatible               " Be iMproved
+    endif
+
+    " Required:
+    set runtimepath+=$HOME/.cache/dein/repos/github.com/Shougo/dein.vim
+
+    " Required:
+    if dein#load_state($HOME . '/.cache/dein')
+      call dein#begin($HOME . '/.cache/dein')
+
+      " Let dein manage dein
+      " Required:
+      call dein#add($HOME . '/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+      " Add or remove your plugins here like this:
+      call dein#add('Shougo/neosnippet.vim')
+      call dein#add('Shougo/neosnippet-snippets')
+      call dein#add('tpope/vim-fugitive')
+      
+
+      " Required:
+      call dein#end()
+      call dein#save_state()
+    endif
+
+    " Required:
+    filetype plugin indent on
+    syntax enable
+
+    " If you want to install not installed plugins on startup.
+    if dein#check_install()
+      call dein#install()
+    endif
+    "
+    "End dein Scripts-------------------------
 endif
-
-" Required:
-set runtimepath+=$HOME/.cache/dein/repos/github.com/Shougo/dein.vim
-
-" Required:
-if dein#load_state($HOME . '/.cache/dein')
-  call dein#begin($HOME . '/.cache/dein')
-
-  " Let dein manage dein
-  " Required:
-  call dein#add($HOME . '/.cache/dein/repos/github.com/Shougo/dein.vim')
-
-  " Add or remove your plugins here like this:
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('tpope/vim-fugitive')
-  
-
-  " Required:
-  call dein#end()
-  call dein#save_state()
-endif
-
-" Required:
-filetype plugin indent on
-syntax enable
-
-" If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
-endif
-"
-"End dein Scripts-------------------------
 
 " Vimの背景色をなくすための設定
 " (https://sy-base.com/myrobotics/vim/vim-transparent/)
