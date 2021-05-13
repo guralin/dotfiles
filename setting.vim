@@ -1,5 +1,5 @@
 " 書き換えが行われます
-let mode = "dein.vim"
+let mode = "normal.vim"
 " 終了
 
 
